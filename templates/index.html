@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+		<style>
+                form{
+                    background: -webkit-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+                    background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+                    background: linear-gradient(bottom, #CCCCCC, #EEEEEE 250px);
+                    height: 600px;
+                    font-family: Tahoma, sans-serif;
+                    font-size: 14px;
+                    font-style: italic;
+                    line-height: 30px;
+                    font-weight: bold;
+                    color: #09C;
+                    text-decoration: none;
+                    border-bottom-right-radius: 15px;
+                    border-bottom-left-radius: 15px;
+                    border-top-right-radius: 15px;
+                    border-top-left-radius: 15px;
+                    padding: 20px;
+                    border: 1px solid #999;
+                    -webkit-box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
+                    -moz-box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
+                    box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
+                }
+                textarea#feedback{
+                    width: 375px;
+                    height: 150px;
+                    display: block;
+                }
+                
+                input.button:hover{
+                    background: #fff;
+                    color: #09C;
+                }
+                textarea:focus, input:focus {
+                    border: 1px solid #09C;
+                }
+                .nameInput{
+                
+                background-color: transparent;
+                background: transparent;
+                border: none;
+                outline: none;
+                margin-right: auto;
+                margin-left: auto;
+                
+            }
+            
+            #email{
+                width: 100%;
+                height: 40px;
+                background-color: transparent;
+                background: transparent;
+                border: none;
+                outline: none;
+                border-bottom: solid 2px #a5a5a5;
+                margin-bottom: 15px;
+            }
+            .txtarea
+                {
+                   
+                    width: 70%;
+                    height: 30px;
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    border-bottom: solid 2px #a5a5a5;
+                    margin-top: 10px;
+                    font-family: sans-serif;
+            }
+        </style>        
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="../static/img/Royal-Hospital-logo.png" type="image/png">
+	<title>Royal Hospital Online Diagnosis</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="../static/css1/bootstrap.css">
+	<link rel="stylesheet" href="../static/vendors/linericon/style.css">
+	<link rel="stylesheet" href="../static/css1/font-awesome.min.css">
+	<link rel="stylesheet" href="../static/vendors/owl-carousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="../static/vendors/lightbox/simpleLightbox.css">
+	<link rel="stylesheet" href="../static/vendors/nice-select/css/nice-select.css">
+	<link rel="stylesheet" href="../static/vendors/animate-css/animate.css">
+	<!-- main css -->
+  <link rel="stylesheet" href="../static/css1/style.css">
+  
+  <!--from login and logout-->
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<style>
+.ttt{
+	margin-top: 20px;
+}
+</style>
+
+</head>
+
+<body>
+
+	<!--================ Start Header Menu Area =================-->
+
+	<header class="header_area">
+		<div class="header-top">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-3 col-sm-6 col-4 header-top-left">
+						<select class="default-select">
+							<option data-display="English">English</option>
+							<option value="1">Germany</option>
+							<option value="2">Spanish</option>
+						</select>
+					</div>
+					<div class="col-lg-9 col-sm-6 col-8 header-top-right">
+						<a href="tel:+2330205095922"><span class="lnr lnr-phone-handset"></span> <span class="text"><span class="text">(+233) 0205095922 / 0362028414</span></span></a>
+						<a href="mailto:info@royalhospitalho.com"><span class="lnr lnr-envelope"></span> <span class="text"><span class="text">info@royalhospitalho.com</span></span></a>
+						<a href="#" class="primary-btn text-uppercase">Daily Reminder</a>
+					</div>
+				</div>
+			</div>
+    </div>
+    
+<!--login and logout body -->
+
+<div class="container ttt">
+          <ul>
+              <li class="col-sm-6"><a href="/login" class="btn form-control btn-success">Login</a></li>
+              <li class="col-sm-6"><a href="/register" class="btn form-control btn-primary">Register</a></li>
+          </ul>
+</div>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		<div class="main_menu">
+			<div class="search_input" id="search_input_box">
+				<div class="container"> 
+					<form class="d-flex justify-content-between">
+						<input type="text" class="form-control" id="search_input" placeholder="Search Here">
+						<button type="submit" class="btn"></button>
+						<span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
+					</form>
+				</div>
+			</div>
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<a class="navbar-brand logo_h" href="/"><img src="../static/img/Royal-Hospital-logo.png" alt=""></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+						<ul class="nav navbar-nav menu_nav ml-auto">
+							<li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+							<li class="nav-item"><a class="nav-link" href="/About">About</a></li> 
+									<li class="nav-item"><a class="nav-link" href="/login">Remote Diagnosis</a></li>
+									<li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+								</ul>
+							</li>
+							
+							
+						</ul>
+						<ul class="nav navbar-nav ml-auto">
+							<li class="nav-item"><a href="#" class="search">
+									<i class="lnr lnr-magnifier" id="search"></i></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<!--================ End Header Menu Area =================-->
+
+	<!--================ Start Home Banner Area =================-->
+	<section class="home_banner_area">
+		<div class="banner_inner">
+			<div class="container">
+
+				<div class="banner_content">
+					<h2>
+						Welcome To Royal Hospital, Ho.<br/> Quality Healthcare At The <br/>Comfort Of Your Home <br>
+					</h2>
+					<p>
+						We are located at Somey along the Ho Police Training  off Taviefe Deme in the Ho Municipal District of the Volta Region, Ghana
+					</p>
+					<a class="primary-btn text-uppercase" href="#">Learn More</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End Home Banner Area =================-->
+
+	<!--================ Start Features Area =================-->
+	<section class="features_area section_gap">
+		<div class="container">
+			<div class="row">
+				<!-- single feature -->
+				<div class="col-lg-4 col-md-6">
+					<div class="single_feature">
+						<div class="feature_head">
+							<img src="../static/img/features/icon1.png" alt="">
+							<h4>Emergency Services</h4>
+						</div>
+						<div class="feature_content">
+							<p>In the case of an emergency simply give us a call on the number below.</p>
+							<div class="feature_btn">
+								<a href="#" class="f_btn">Call Us: (+233) 0205095922 / 0362028414</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- single feature -->
+				<div class="col-lg-4 col-md-6">
+					<div class="single_feature">
+						<div class="feature_head">
+							<img src="../static/img/features/icon2.png" alt="">
+							<h4>Doctors Schedule</h4>
+						</div>
+						<div class="feature_content">
+							<p>Click To Scedule Appointment With Patients.</p>
+							<div class="feature_btn">
+								<a href="#" class="f_btn">Learn More</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- single feature -->
+				<div class="col-lg-4 col-md-6">
+					<div class="single_feature">
+						<div class="feature_head">
+							<img src="../static/img/features/icon3.png" alt="">
+							<h4>Online Appointment</h4>
+						</div>
+						<div class="feature_content">
+							<p>Want To Schedule Appointment With A Doctor?<br/>Click to know more</p>
+							<div class="feature_btn">
+								<a href="#" class="f_btn">Get Appointment</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End Features Area =================-->
+
+	<!--================ Start About Area =================-->
+	<section class="about_area lite_bg">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-5 col-md-5">
+					<div class="about_details lite_bg">
+						<h2>You Are In Good Hands</h2>
+						<p>We Have Team Of Experienced Doctors Available 24/7 To Take Good Care Of You.</p>
+						<ul class="list_wrap">
+							<li class="about_lists">Providing State of-the-art MEdical Care.</li>
+							<li class="about_lists">High Quality And Cost Effective International Standards.</li>
+							<li class="about_lists">Best Practices </li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-4 offset-lg-3 col-md-6 offset-md-1">
+					<div class="about_right overlay">
+						<div class="about_inner">
+							<h4>Doctors Time table</h4>
+							<p>Monday -- 08.00 AM to 10.00 PM</p>
+							<p>Tuesday -- 07.00 AM to 10.00 PM</p>
+							<p>Wednesday -- 07.00 AM to 10.00 PM</p>
+							<p>Thursday -- 07.00 AM to 10.00 PM</p>
+							<p>Friday -- 07.00 AM to 10.00 PM</p>
+							<p>Saturday -- 07.00 AM to 10.00 PM</p>
+							<p>Sunday -- 07.00 AM to 10.00 PM</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="about_bg overlay"></div>
+		</div>
+	</section>
+	<!--================ End About Area =================-->
+
+	<!--================ Start Department Area =================-->
+	<section class="department_area section_gap">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-7">
+					<div class="main_title">
+						<h2>Royal Hospital Popular Departments</h2>
+						<p>Dental Service, Laboratory, Urology Service, Ultrasound, Hysteroscopy, Breast Cancer Screening, Investigation, PAP Smear, Colposcopy.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<!-- single department -->
+				<div class="col-lg-2 text-center col-sm-6">
+					<div class="single_department">
+						<div class="dpmt-thumb">
+							<img src="../static/img/department/d-icon1.png" alt="">
+						</div>
+						<h4>Cardiology</h4>
+					</div>
+				</div>
+				<!-- single department -->
+				<div class="col-lg-2 text-center col-sm-6">
+					<div class="single_department">
+						<div class="dpmt-thumb">
+							<img src="../static/img/department/d-icon2.png" alt="">
+						</div>
+						<h4>Urology</h4>
+					</div>
+				</div>
+				<!-- single department -->
+				<div class="col-lg-2 text-center col-sm-6">
+					<div class="single_department">
+						<div class="dpmt-thumb">
+							<img src="../static/img/department/d-icon3.png" alt="">
+						</div>
+						<h4>Dental Care</h4>
+					</div>
+				</div>
+				<!-- single department -->
+				<div class="col-lg-2 text-center col-sm-6">
+					<div class="single_department">
+						<div class="dpmt-thumb">
+							<img src="../static/img/department/d-icon4.png" alt="">
+						</div>
+						<h4>Eye Care</h4>
+					</div>
+				</div>
+				<!-- single department -->
+				<div class="col-lg-2 text-center col-sm-6">
+					<div class="single_department">
+						<div class="dpmt-thumb">
+							<img src="../static/img/department/d-icon5.png" alt="">
+						</div>
+						<h4>Neurology</h4>
+					</div>
+				</div>
+				<!-- single department -->
+				<div class="col-lg-2 text-center col-sm-6">
+					<div class="single_department">
+						<div class="dpmt-thumb">
+							<img src="../static/img/department/d-icon6.png" alt="">
+						</div>
+						<h4>Plastic Surgery</h4>
+					</div>
+				</div>
+				<a class="primary-btn text-uppercase" href="#">Learn More</a>
+			</div>
+		</div>
+	</section>
+	<!--================ End Department Area =================-->
+
+	<!--================ Start Counter Area =================-->
+	<section class="section_gap counter_area overlay">
+		<div class="container">
+			<div class="row">
+				<!--single-counter-->
+				<div class="col-lg-3 col-sm-6">
+					<div class="single_counter">
+						<h1> <span class="counter_number">30</span>K</h1>
+						<p>Years <br> of Experiences</p>
+					</div>
+				</div>
+				<!--single-counter-->
+				<div class="col-lg-3 col-sm-6">
+					<div class="single_counter">
+						<h1> <span class="counter_number">2</span>K+</h1>
+						<p>Instant <br> Blood Donors </p>
+					</div>
+				</div>
+				<!--single-counter-->
+				<div class="col-lg-3 col-sm-6">
+					<div class="single_counter">
+						<h1> <span class="counter_number">5</span>K+</h1>
+						<p>Well Cured <br> Patients</p>
+					</div>
+				</div>
+				<!--single-counter-->
+				<div class="col-lg-3 col-sm-6">
+					<div class="single_counter">
+						<h1> <span class="counter_number">20</span>K+</h1>
+						<p>Internal <br> Stuff Groups</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ Start Counter Area =================-->
+
+	<!--================ Start Team Area =================-->
+	<section class="section_gap team_area lite_bg">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-7">
+					<div class="main_title">
+						<h2>Departments</h2>
+						<p>Dental Service, Ultra Sound, E.C.G, Colposcopy, Laboratory, Hysteroscopy, Investigation, Urology Service, Breast Cancer Screening, PAP Smear.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<!-- single-team-member -->
+				<div class="col-lg-3 col-sm-6">
+					<div class="single_member">
+						<div class="author">
+							<img src="../static/img/Dr.-Fred.png" alt="">
+						</div>
+						<div class="author_decs">
+							<div class="social_icons">
+								<a href="#"><i class="fa fa-facebook"></i></a>
+								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="#"><i class="fa fa-linkedin"></i></a>
+							</div>
+							<h4>Dr. Fred</h4>
+							<p class="profession">Dentist.</p>
+						</div>
+					</div>
+				</div>
+				<!-- single-team-member -->
+				<div class="col-lg-3 col-sm-6">
+					<div class="single_member">
+						<div class="author">
+							<img src="../static/img/Mrs Beatrice Agbley.png" alt="">
+						</div>
+						<div class="author_decs">
+							<div class="social_icons">
+								<a href="#"><i class="fa fa-facebook"></i></a>
+								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="#"><i class="fa fa-linkedin"></i></a>
+							</div>
+							<h4>Mrs. Beatrice Agbley</h4>
+							<p class="profession">Sr. Anaesthetist.</p>
+						</div>
+					</div>
+				</div>
+				<!-- single-team-member -->
+				<div class="col-lg-3 col-sm-6">
+					<div class="single_member">
+						<div class="author">
+							<img src="../static/img/Dr-Amakpa.png" alt="">
+						</div>
+						<div class="author_decs">
+							<div class="social_icons">
+								<a href="#"><i class="fa fa-facebook"></i></a>
+								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="#"><i class="fa fa-linkedin"></i></a>
+							</div>
+							<h4>Dr. Eric Yao Amakpa</h4>
+							<p class="profession">Medical Director.</p>
+						</div>
+					</div>
+				</div>
+				<!-- single-team-member -->
+				<div class="col-lg-3 col-sm-6">
+					<div class="single_member">
+						<div class="author">
+							<img src="../static/img/Dr.-White.png" alt="">
+						</div>
+						<div class="author_decs">
+							<div class="social_icons">
+								<a href="#"><i class="fa fa-facebook"></i></a>
+								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="#"><i class="fa fa-linkedin"></i></a>
+							</div>
+							<h4>Dr. White</h4>
+							<p class="profession">MEdical Doctor.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End Team Area =================-->
+
+	<!--================ Start Blog Area =================-->
+	<section class="section_gap blog_area">
+		<div class="container">
+			<div class="row">
+				
+
+				<!-- appoinment area -->
+				<div class="col-lg-6">
+					<div class="recent_blog appoinment">
+						<div class="blog_title">
+							<h2>Make an Appointment</h2>
+							<p>fill in the form below to book appointment with a doctor.</p>
+						</div>
+					</div>
+					<div class="row justify-content-center">
+						<div class="appoinment_form_section lite_bg">
+							<form class="form_area" id="myForm" action="mail.html" method="post">
+								<div class="row">
+									<div class="col-lg-12 form_group">
+										<input name="name" placeholder="Patient name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'"
+										 class="common_input form-control" required="" type="text">
+										<input name="email" placeholder="Email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
+										 onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" class="common_input form-control"
+										 required="" type="email">
+										<input name="name" placeholder="Date of birth" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'"
+										 class="common_input form-control" required="" type="text">
+										<select class="default-select">
+											<option data-display="Doctor’s name">Doctor’s name</option>
+											<option value="1">Rashimul</option>
+											<option value="2">Shofi</option>
+										</select>
+										<input name="subject" placeholder="Appointment date" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'"
+										 class="common_input mb-10 form-control" required="" type="text">
+
+										<textarea class="common_textarea form-control" name="message" placeholder="Messege" onfocus="this.placeholder = ''"
+										 onblur="this.placeholder = 'Messege'" required=""></textarea>
+									</div>
+									<div class="col-lg-12 text-center">
+										<button class="primary-btn text-uppercase">confirm booking</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End Blog Area =================-->
+
+	  <!--================ Start footer Area  =================-->
+	<footer class="footer-area section-gap">
+		<div class="footer_top section_gap">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3  col-md-6 col-sm-6">
+						<div class="single-footer-widget">
+							<h4 class="text-white">About Us</h4>
+							<p>
+								The Ho Royal Hospital Is Based In The Area Of Somey, In The Ho Municipal District Of The Vilta Region Of Ghana. The Main Catchment Is Basically Residents Of Ho And Its Environs Through NHIS, Private Insurance And CAsh Clients. It Provides High Level Specialty Quality Health Care Service.
+							</p>
+						</div>
+					</div>
+					<div class="col-lg-4  col-md-6 col-sm-6">
+						<div class="single-footer-widget">
+							<h4 class="text-white">Contact Us</h4>
+							<p>
+								(+233) 0205095922 / 0362028414
+							</p>
+							
+						</div>
+					</div>
+					<div class="col-lg-5  col-md-6 col-sm-6">
+						<div class="single-footer-widget">
+							<h4 class="text-white">Newsletter</h4>
+							<p>You can trust us. we only send offers, not a single spam.</p>
+							<div class="d-flex flex-row" id="mc_embed_signup">
+								<form class="navbar-form" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+								 method="get">
+									<div class="input-group add-on">
+										<input class="form-control" name="EMAIL" placeholder="Email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'"
+										 required="" type="email">
+										<div style="position: absolute; left: -5000px;">
+											<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+										</div>
+										<div class="input-group-btn">
+											<button class="genric-btn text-uppercase">
+												get started
+											</button>
+										</div>
+									</div>
+									<div class="info mt-20"></div>
+								</form>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="d-flex justify-content-between align-items-center flex-wrap">
+					<p class="footer-text"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">BITL300 Software Engineering Group4</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+					<div class="footer-social d-flex align-items-center">
+						<a href="#"><i class="fa fa-facebook"></i></a>
+						<a href="#"><i class="fa fa-twitter"></i></a>
+						<a href="#"><i class="fa fa-dribbble"></i></a>
+						<a href="#"><i class="fa fa-behance"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--================ End footer Area  =================-->
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="../static/js/jquery-3.2.1.min.js"></script>
+	<script src="../static/js/popper.js"></script>
+	<script src="../static/js/bootstrap.min.js"></script>
+	<script src="../static/js/stellar.js"></script>
+	<script src="../static/vendors/lightbox/simpleLightbox.min.js"></script>
+	<script src="../static/vendors/nice-select/js/jquery.nice-select.min.js"></script>
+	<script src="../static/vendors/owl-carousel/owl.carousel.min.js"></script>
+	<script src="../static/js/jquery.ajaxchimp.min.js"></script>
+	<script src="../static/vendors/counter-up/jquery.waypoints.min.js"></script>
+	<script src="../static/vendors/counter-up/jquery.counterup.js"></script>
+	<script src="../static/js/mail-script.js"></script>
+	<!--gmaps Js-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+	<script src="../static/js/gmaps.min.js"></script>
+	<script src="../static/js/theme.js"></script>
+</body>
+
+</html>
