@@ -1,0 +1,15 @@
+categories:
+- doctor
+conversations:
+- - I want to book an appointment with a doctor
+  - sorry, all doctors are occupied at the moment. We will connect you to a doctor soon. Do you want to book an appointment?
+  - is a doctor available?
+  - sorry, all doctors are occupied at the moment. We will connect you to a doctor soon. Do you want to book an appointment?
+  - yes i want to book an appointment 
+  - i want to talk to a doctor
+  - you shall be called once the doctor is available. Do you want to book an appointment?
+  - can you book an apointment with a doctor? 
+  - Yes, input the following, Patient Name Date Time Telephone number or email
+  - appointment details saved. you shall be contacted shortly.
+  - thanks
+  - happy to help!
