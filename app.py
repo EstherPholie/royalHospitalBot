@@ -6,7 +6,7 @@ from flask_sqlalchemy import SQLAlchemy
   
 app = Flask(__name__) 
 #database connection
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////home/dela/Desktop/Erhbot/database.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 db = SQLAlchemy(app)
 
 #db creation
